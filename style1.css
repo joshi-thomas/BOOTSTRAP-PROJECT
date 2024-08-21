@@ -1,0 +1,92 @@
+body {
+    font-family: "Poppins", system-ui;
+}
+
+.row {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.btn-sm{
+    color: black;
+    background-color: #ffca00;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-sm:hover{
+    background-color: #c4ff08;
+}
+.btn-sm.btw-info {
+    background-color: transparent; /* Removes the default background color */
+    /* border: 0.2vw solid #B5651D;  */
+}
+
+h1 {
+    font-family: "Grey Qo", cursive;
+    font-size: 3vw; /* Adjusted from 3rem to 3vw */
+    font-weight: 700;
+    letter-spacing: 0.1vw; /* Adjusted from 1px to 0.1vw */
+    text-transform: uppercase;
+    color: #c4ff08;
+}
+/* -------------------special coffee------------------ */
+@media only screen and (max-width: 1000px){
+    .cover{
+        margin-left: 15vw;
+        
+    }
+    .cover img{
+        height: 20vh;
+    }
+    .ig2{
+        margin-left: 18vw;
+        margin-top: 2vh;
+    }
+}
+@media only screen and (max-width: 600px){
+    .ig4,.ig6{
+        margin-left: 18vw;
+    }
+} 
+/* -----------------other products--------------- */
+
+
+/* ---------------------------------next----------- */
+.container2{
+    transform-style: preserve-3d;
+    animation: rotate 50s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+
+}
+.container2 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+.container2 span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    transition: 2s;
+}
+.container2 span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
